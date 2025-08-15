@@ -8,8 +8,8 @@ import json
 import time
 
 # --------- CONFIG ---------
-TELEGRAM_TOKEN = "7982458977:AAFCf7N1Mt5nxCHL8d0OnBrrAecPAXfMZjk"
-TELEGRAM_CHAT_ID = "@PriceDealerbot"  # replace with your Telegram channel username
+TELEGRAM_TOKEN = os.environ["TELEGRAM_TOKEN"]
+TELEGRAM_CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
 CHECK_INTERVAL = 900  # seconds (15 minutes)
 DEALS_FILE = "sent_deals.json"
 MIN_DISCOUNT_PERCENT = 90
@@ -114,3 +114,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
